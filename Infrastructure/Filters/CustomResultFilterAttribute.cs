@@ -20,7 +20,7 @@ namespace SampleWebApp.Infrastructure.Filters
             Type resultType = context.Result.GetType();
 
             ResponseFormatter appropriateFormatter = _responseFormatters
-                .Single(formatter => formatter.HandlerOf == resultType);
+                .Single(formatter => formatter.ResultTypeToFormat == resultType);
 
             appropriateFormatter.ContextResult(context);
         }

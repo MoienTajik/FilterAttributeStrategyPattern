@@ -8,7 +8,7 @@ namespace SampleWebApp.Infrastructure.Formatters
 {
     public class BadRequestResultFormatter : ResponseFormatter
     {
-        public override Type HandlerOf => typeof(BadRequestObjectResult);
+        public override Type ResultTypeToFormat => typeof(BadRequestObjectResult);
 
         public override void ContextResult(ResultExecutingContext context)
         {
